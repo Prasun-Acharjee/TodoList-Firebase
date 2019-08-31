@@ -4,7 +4,7 @@ class ToDoItem extends Component{
         return(
             <div>
                 <li>{this.props.element}
-                <button onClick={()=> this.props.remove(this.props.id[this.props.index])}>Delete</button>
+                <button onClick={()=> this.props.remove(this.props.id[this.props.index])}>X</button>
                 </li>
             </div>
         );

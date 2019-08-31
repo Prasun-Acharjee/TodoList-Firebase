@@ -21,7 +21,7 @@ componentDidMount()
         //console.log(elements);
       newState.push(elements[item]);
      // console.log(elements[item]);
-      idState.push(item);
+      idState=Object.keys(elements);
       
     }
     /*for (var key in elements) {
