@@ -14,12 +14,13 @@ componentDidMount()
     let elements=snapshot.val();
     let newState = [];
     let idState=[];
-    console.log(elements);
-    console.log(item);
+   // console.log(Object.keys(elements));
+    //console.log(item);
     for (var item in elements) {
-     console.log(item);
+     //console.log(item);
         //console.log(elements);
       newState.push(elements[item]);
+     // console.log(elements[item]);
       idState.push(item);
       
     }
@@ -42,13 +43,15 @@ addtolist=()=>
   const itemref=firebase.database().ref('elements');
   itemref.push(this.state.item);
   this.state.item="";
+  console.log(itemref);
 }
 
 removing=(index)=>
 {
  
-  console.log(index);
+  //console.log(index);
   const itemRef = firebase.database().ref(`elements/${index}`);
+  console.log(itemRef.key);
   itemRef.remove();
 
 }

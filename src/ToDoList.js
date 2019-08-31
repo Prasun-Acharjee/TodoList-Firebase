@@ -5,7 +5,7 @@ class ToDoList extends Component{
         return(
             <div>
                 {
-                    this.props.name.map((element,index)=> <ToDoItem key={element.id}
+                    this.props.name.map((element,index)=> <ToDoItem key={element}
                      remove={this.props.remove} element={element} index={index} id={this.props.id}/>)
                 }
                 </div>
